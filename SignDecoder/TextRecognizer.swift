@@ -5,5 +5,7 @@ import Vision
 struct TextRecognizer {
     init(imageResource: ImageResource) {
         var request = RecognizeTextRequest()
+
+        let image = UIImage(resource: imageResource)
     }
 }
