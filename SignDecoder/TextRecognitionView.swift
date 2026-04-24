@@ -2,6 +2,7 @@ import SwiftUI
 
 struct TextRecognitionView: View {
     let imageResource: ImageResource
+    @State private var textRecognizer: TextRecognizer?
 
     var body: some View {
         VStack {
