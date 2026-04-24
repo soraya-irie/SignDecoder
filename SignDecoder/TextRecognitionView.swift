@@ -9,7 +9,9 @@ struct TextRecognitionView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
+            Spacer()
         }
+        .padding()
     }
 }
 
