@@ -14,5 +14,9 @@ struct TextRecognizer {
            let results = try? await request.perform(on: imageData) {
             observations = results
         }
+
+        for observation in observations {
+            let candidate = observation.topCandidate(1)
+        }
     }
 }
