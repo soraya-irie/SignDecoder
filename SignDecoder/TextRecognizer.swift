@@ -8,6 +8,7 @@ struct TextRecognizer {
 
     init(imageResource: ImageResource) async {
         var request = RecognizeTextRequest()
+        request.recognitionLevel = .fast
 
         let image = UIImage(resource: imageResource)
 
