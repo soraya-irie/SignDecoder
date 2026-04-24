@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct TextRecognitionView: View {
-    let imageResource: ImageResource = .sign1
+    let imageResource: ImageResource
 
     var body: some View {
         VStack {
@@ -18,5 +18,5 @@ struct TextRecognitionView: View {
 }
 
 #Preview {
-    TextRecognitionView()
+    TextRecognitionView(imageResource: .sign1)
 }
