@@ -3,6 +3,7 @@ import SwiftUI
 import Vision
 
 struct TextRecognizer {
+    var recognizedText = ""
     var observations: [RecognizedTextObservation] = []
 
     init(imageResource: ImageResource) async {
@@ -16,7 +17,11 @@ struct TextRecognizer {
         }
 
         for observation in observations {
-            let candidate = observation.topCandidate(1)
+            let candidate = observation.topCandidates(1)
+
+            if let observedText = candidate.first?.string {
+                recognizedText += "\(observedText) "
+            }
         }
     }
 }
