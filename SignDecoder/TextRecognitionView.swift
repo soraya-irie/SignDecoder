@@ -10,6 +10,9 @@ struct TextRecognitionView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
+                .task {
+                    textRecognizer = await TextRecognizer(imageResource: imageResource)
+                }
             Spacer()
 
             TranslationView(text: "")
