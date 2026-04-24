@@ -6,6 +6,9 @@ struct TextRecognitionView: View {
     var body: some View {
         VStack {
             Image(imageResource)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
         }
     }
 }
