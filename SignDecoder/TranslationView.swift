@@ -1,4 +1,5 @@
 import SwiftUI
+import Translation
 
 struct TranslationView: View {
     var text: String
@@ -19,6 +20,7 @@ struct TranslationView: View {
                        alignment: .topLeading)
                 .padding()
                 .background(Color(white: 0.9))
+                .translationPresentation(isPresented: $showingTranslation, text: text)
 
             Button {
                 showingTranslation = true
