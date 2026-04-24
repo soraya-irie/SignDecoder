@@ -3,6 +3,8 @@ import SwiftUI
 import Vision
 
 struct TextRecognizer {
+    var observations: [RecognizedTextObservation] = []
+
     init(imageResource: ImageResource) async {
         var request = RecognizeTextRequest()
 
@@ -10,7 +12,7 @@ struct TextRecognizer {
 
         if let imageData = image.pngData(),
            let results = try? await request.perform(on: imageData) {
-
+            observations = results
         }
     }
 }
