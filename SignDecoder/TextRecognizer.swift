@@ -7,5 +7,9 @@ struct TextRecognizer {
         var request = RecognizeTextRequest()
 
         let image = UIImage(resource: imageResource)
+
+        if let imageData = image.pngData() {
+
+        }
     }
 }
