@@ -10,6 +10,8 @@ struct TextRecognitionView: View {
                 .aspectRatio(contentMode: .fit)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
             Spacer()
+
+            TranslationView(text: "")
         }
         .padding()
     }
