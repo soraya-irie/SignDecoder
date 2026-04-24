@@ -3,5 +3,7 @@ import SwiftUI
 import Vision
 
 struct TextRecognizer {
+    init(imageResource: ImageResource) {
 
+    }
 }
