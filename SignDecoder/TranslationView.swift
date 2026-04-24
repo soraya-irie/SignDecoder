@@ -2,6 +2,7 @@ import SwiftUI
 
 struct TranslationView: View {
     var text: String
+    @State private var showingTranslation = false
 
     var body: some View {
         VStack {
@@ -20,7 +21,7 @@ struct TranslationView: View {
                 .background(Color(white: 0.9))
 
             Button {
-
+                showingTranslation = true
             } label: {
                 Text("Translate")
             }
