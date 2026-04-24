@@ -6,6 +6,11 @@ struct TranslationView: View {
     var body: some View {
         VStack {
             Text(text)
+                .frame(maxWidth: .infinity,
+                       maxHeight: 50,
+                       alignment: .topLeading)
+                .padding()
+                .background(Color(white: 0.9))
 
             Button {
 
