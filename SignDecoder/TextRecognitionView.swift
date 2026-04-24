@@ -1,8 +1,12 @@
 import SwiftUI
 
 struct TextRecognitionView: View {
+    let imageResource: ImageResource = .sign1
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image(imageResource)
+        }
     }
 }
 
