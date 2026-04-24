@@ -4,6 +4,6 @@ import Vision
 
 struct TextRecognizer {
     init(imageResource: ImageResource) {
-
+        var request = RecognizeTextRequest()
     }
 }
