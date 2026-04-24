@@ -14,9 +14,13 @@ struct TextRecognitionView: View {
             TranslationView(text: "")
         }
         .padding()
+        .navigationTitle("Sign Info")
     }
 }
 
 #Preview {
-    TextRecognitionView(imageResource: .sign1)
+    NavigationStack {
+        TextRecognitionView(imageResource: .sign1)
+            .navigationBarTitleDisplayMode(.inline)
+    }
 }
