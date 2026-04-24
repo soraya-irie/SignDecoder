@@ -1,9 +1,11 @@
 import SwiftUI
 
 struct TranslationView: View {
+    var text: String
+
     var body: some View {
         VStack {
-            Text("Caution, falling rocks")
+            Text(text)
 
             Button {
 
@@ -15,5 +17,5 @@ struct TranslationView: View {
 }
 
 #Preview {
-    TranslationView()
+    TranslationView(text: "Caution, falling rocks")
 }
