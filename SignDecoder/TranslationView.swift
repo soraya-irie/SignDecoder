@@ -5,6 +5,13 @@ struct TranslationView: View {
 
     var body: some View {
         VStack {
+            Text("Identified Text")
+                .font(.subheadline.bold())
+                .textCase(.uppercase)
+                .foregroundStyle(.gray)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading)
+
             Text(text)
                 .frame(maxWidth: .infinity,
                        maxHeight: 50,
