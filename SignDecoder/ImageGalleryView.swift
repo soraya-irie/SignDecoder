@@ -13,7 +13,11 @@ struct ImageGalleryView: View {
         Grid {
             ForEach(imageResources, id: \.self) { resourceRow in
                 GridRow {
-
+                    ForEach(resourceRow, id: \.self) { resource in
+                        Image(resource)
+                            .resizable()
+                            .frame(width: itemSize, height: itemSize)
+                    }
                 }
             }
         }
