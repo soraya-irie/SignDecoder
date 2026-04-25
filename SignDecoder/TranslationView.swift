@@ -40,3 +40,7 @@ struct TranslationView: View {
 #Preview {
     TranslationView(text: "Caution, falling rocks", isProcessing: false)
 }
+
+#Preview {
+    TranslationView(text: "", isProcessing: true)
+}
