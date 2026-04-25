@@ -21,6 +21,11 @@ struct TranslationView: View {
                        alignment: .topLeading)
                 .padding()
                 .background(Color(white: 0.9))
+                .overlay {
+                    if isProcessing {
+                        ProgressView()
+                    }
+                }
                 .translationPresentation(isPresented: $showingTranslation, text: text)
 
             Button {
