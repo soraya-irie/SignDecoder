@@ -14,12 +14,16 @@ struct ImageGalleryView: View {
             ForEach(imageResources, id: \.self) { resourceRow in
                 GridRow {
                     ForEach(resourceRow, id: \.self) { resource in
-                        Image(resource)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: itemSize, height: itemSize)
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                            .padding(10)
+                        NavigationLink {
+                            TextRecognitionView(imageResource: resource)
+                        } label: {
+                            Image(resource)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: itemSize, height: itemSize)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                                .padding(10)
+                        }
                     }
                 }
             }
@@ -28,5 +32,7 @@ struct ImageGalleryView: View {
 }
 
 #Preview {
-    ImageGalleryView()
+    NavigationStack {
+        ImageGalleryView()
+    }
 }
