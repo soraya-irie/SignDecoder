@@ -3,6 +3,7 @@ import Translation
 
 struct TranslationView: View {
     var text: String
+    var isProcessing: Bool
     @State private var showingTranslation = false
 
     var body: some View {
@@ -32,5 +33,5 @@ struct TranslationView: View {
 }
 
 #Preview {
-    TranslationView(text: "Caution, falling rocks")
+    TranslationView(text: "Caution, falling rocks", isProcessing: false)
 }
