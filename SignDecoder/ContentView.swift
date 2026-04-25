@@ -10,6 +10,7 @@ struct ContentView: View {
                 ImageGalleryView()
                 Spacer()
             }
+            .trailTheme()
             .navigationTitle("Sign Decoder")
         }
     }
