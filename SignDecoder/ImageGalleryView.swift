@@ -11,7 +11,11 @@ struct ImageGalleryView: View {
 
     var body: some View {
         Grid {
+            ForEach(imageResources, id: \.self) { resourceRow in
+                GridRow {
 
+                }
+            }
         }
     }
 }
