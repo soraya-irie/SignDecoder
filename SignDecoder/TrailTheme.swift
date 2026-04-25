@@ -8,3 +8,9 @@ struct TrailTheme: ViewModifier {
         }
     }
 }
+
+extension View {
+    func trailTheme() -> some View {
+        modifier(TrailTheme())
+    }
+}
