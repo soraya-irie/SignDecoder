@@ -16,7 +16,10 @@ struct ImageGalleryView: View {
                     ForEach(resourceRow, id: \.self) { resource in
                         Image(resource)
                             .resizable()
+                            .aspectRatio(contentMode: .fill)
                             .frame(width: itemSize, height: itemSize)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                            .padding(10)
                     }
                 }
             }
