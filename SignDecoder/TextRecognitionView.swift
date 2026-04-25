@@ -25,7 +25,7 @@ struct TextRecognitionView: View {
                 }
             Spacer()
 
-            TranslationView(text: textRecognizer?.recognizedText ?? "")
+            TranslationView(text: textRecognizer?.recognizedText ?? "", isProcessing: isProcessing)
         }
         .padding()
         .navigationTitle("Sign Info")
