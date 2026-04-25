@@ -38,6 +38,7 @@ struct TranslationView: View {
                     .foregroundColor(.white)
                     .background(RoundedRectangle(cornerRadius: 8))
             }
+            .disabled(text.isEmpty)
             .padding(.top)
         }
     }
