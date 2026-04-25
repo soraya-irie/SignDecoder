@@ -1,7 +1,9 @@
 import SwiftUI
+import Vision // チュートリアルには記載されていないが必要
 
 struct TextRecognitionView: View {
     let imageResource: ImageResource
+    let boundingColor = Color(red: 1.00, green: 0.00, blue: 0.85)
     @State private var textRecognizer: TextRecognizer?
 
     var body: some View {
@@ -15,7 +17,10 @@ struct TextRecognitionView: View {
                 }
                 .overlay {
                     if let observations = textRecognizer?.observations {
-
+                        ForEach(observations, id: \.uuid) { observation in
+                            BoundsRect(normalizedRect: observation.boundingBox)
+                                .stroke(boundingColor, lineWidth: 3)
+                        }
                     }
                 }
             Spacer()
