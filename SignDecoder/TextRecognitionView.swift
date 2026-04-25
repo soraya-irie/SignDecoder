@@ -30,6 +30,10 @@ struct TextRecognitionView: View {
         .padding()
         .navigationTitle("Sign Info")
     }
+
+    private var isProcessing: Bool {
+        textRecognizer == nil
+    }
 }
 
 #Preview {
