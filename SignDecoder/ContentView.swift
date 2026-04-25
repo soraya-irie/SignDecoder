@@ -1,21 +1,13 @@
-//
-//  ContentView.swift
-//  SignDecoder
-//
-//  Created by soraya irie on 2026/04/22.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Tap to select a sign to translate")
+                .font(.headline)
+
+            ImageGalleryView()
         }
-        .padding()
     }
 }
 
