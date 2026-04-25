@@ -13,6 +13,11 @@ struct TextRecognitionView: View {
                 .task {
                     textRecognizer = await TextRecognizer(imageResource: imageResource)
                 }
+                .overlay {
+                    if let observations = textRecognizer?.observations {
+
+                    }
+                }
             Spacer()
 
             TranslationView(text: textRecognizer?.recognizedText ?? "")
